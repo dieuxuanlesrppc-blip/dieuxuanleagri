@@ -1,1 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lê Thị Diệu Xuân – Chuyên viên Trồng trọt & Bảo vệ thực vật</title>
+    <style>
+        /* --- RESET & BASIC --- */
+        * {margin:0; padding:0; box-sizing:border-box;}
+        body {font-family: Arial, sans-serif; line-height:1.6; color:#333;}
+        a {text-decoration:none; color: inherit;}
+        ul {list-style:none;}
+
+        /* --- HEADER / HERO --- */
+        header {
+            background: linear-gradient(rgba(0,128,0,0.7), rgba(0,128,0,0.7)), url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            color:white; height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;
+        }
+        header h1 {font-size:3rem; margin-bottom:10px;}
+        header p {font-size:1.5rem; margin-bottom:20px;}
+        .btn-contact {
+            background:#fff; color:#008000; padding:10px 25px; border-radius:25px; font-weight:bold; transition:0.3s;
+        }
+        .btn-contact:hover {background:#008000; color:#fff;}
+
+        /* --- NAVIGATION --- */
+        nav {
+            position:fixed; top:0; width:100%; background:#008000; color:white; padding:10px 20px; display:flex; justify-content:flex-end; z-index:1000;
+        }
+        nav a {margin-left:20px; color:white; font-weight:bold;}
+        nav a:hover {text-decoration:underline;}
+
+        /* --- SECTION --- */
+        section {padding:80px 20px; max-width:1000px; margin:0 auto;}
+        section h2 {color:#008000; margin-bottom:20px; font-size:2rem; text-align:center;}
+        section p {margin-bottom:15px; text-align:justify;}
+
+        /* --- ABOUT --- */
+        #about img {width:200px; border-radius:50%; display:block; margin:0 auto 20px;}
+
+        /* --- LIST ICONS --- */
+        ul.skills li::before {content:"✔ "; color:#008000;}
+        ul.projects li::before {content:"• "; color:#008000;}
+
+        /* --- FOOTER --- */
+        footer {background:#f4f4f4; padding:20px; text-align:center; color:#555;}
+    </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <a href="#about">Giới thiệu</a>
+    <a href="#skills">Lĩnh vực</a>
+    <a href="#experience">Kinh nghiệm</a>
+    <a href="#projects">Dự án</a>
+    <a href="#contact">Liên hệ</a>
+</nav>
+
+<!-- HERO -->
+<header>
+    <h1>Lê Thị Diệu Xuân</h1>
+    <p>Chuyên viên Trồng trọt & Bảo vệ thực vật</p>
+    <p>“Theo đuổi khoa học, đồng hành cùng nông dân”</p>
+    <a href="#contact" class="btn-contact">Liên hệ tôi</a>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>Giới thiệu bản thân</h2>
+    <img src="https://images.unsplash.com/photo-1603415526960-fb4a74a2d6b1?auto=format&fit=crop&w=400&q=80" alt="Ảnh cá nhân">
+    <p>Tôi là chuyên viên trong lĩnh vực trồng trọt và bảo vệ thực vật, gắn bó với công tác giám sát, dự báo sâu bệnh hại trên cây trồng và chuyển giao tiến bộ kỹ thuật đến nông dân. Tôi hướng đến việc áp dụng các giải pháp khoa học phù hợp với thực tiễn sản xuất, góp phần nâng cao hiệu quả canh tác và xây dựng nền nông nghiệp an toàn, bền vững.</p>
+</section>
+
+<!-- SKILLS / LĨNH VỰC CHUYÊN MÔN -->
+<section id="skills">
+    <h2>Lĩnh vực chuyên môn</h2>
+    <ul class="skills">
+        <li>Giám sát và dự báo sâu bệnh hại trên cây trồng</li>
+        <li>Nhận diện sâu hại chính, thiên địch, bệnh hại và cỏ dại trên lúa</li>
+        <li>Chuyển giao tiến bộ kỹ thuật và hoạt động khuyến nông</li>
+        <li>Kiểm dịch thực vật và đánh giá nguy cơ sinh vật gây hại</li>
+        <li>Bảo vệ thực vật theo hướng an toàn, sinh thái và bền vững</li>
+    </ul>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+    <h2>Kinh nghiệm công tác</h2>
+    <ul class="projects">
+        <li>Trung tâm Trồng trọt và Bảo vệ thực vật phía Nam – Giám sát sản xuất cây trồng, dự báo sâu bệnh và hỗ trợ kỹ thuật tại địa phương</li>
+        <li>Trung tâm Kiểm dịch thực vật sau nhập khẩu II, TP.HCM – Phân tích nguy cơ dịch hại, hỗ trợ mở cửa thị trường nông sản, giám định sinh vật gây hại</li>
+    </ul>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h2>Dự án tiêu biểu</h2>
+    <ul class="projects">
+        <li>Ecological Engineering in Rice Production – Demonstration, Dissemination and Application</li>
+        <li>APPPC Training Workshop on Fruit Fly Management</li>
+        <li>IPM & IPHM Training of the Trainers (TOT)</li>
+        <li>Dự án LEGATO – Đánh giá rủi ro và cơ hội trong hệ thống lúa tưới tại châu Á</li>
+        <li>Ecological management of rodents, weeds, insects and birds in rice agro-ecosystems (IRRI, Philippines)</li>
+    </ul>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Liên hệ</h2>
+    <p>Email: <a href="mailto:dieuxuanlesrppc@gmail.com">dieuxuanlesrppc@gmail.com</a></p>
+    <p>Điện thoại: 0907 525 758</p>
+    <p>Trung tâm Trồng trọt và Bảo vệ thực vật phía Nam, Đồng Tháp</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    &copy; 2025 Lê Thị Diệu Xuân. All rights reserved.
+</footer>
+
+</body>
+</html>
 
