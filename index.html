@@ -1,121 +1,163 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lê Thị Diệu Xuân – Chuyên viên Trồng trọt & Bảo vệ thực vật</title>
-    <style>
-        /* --- RESET & BASIC --- */
-        * {margin:0; padding:0; box-sizing:border-box;}
-        body {font-family: Arial, sans-serif; line-height:1.6; color:#333;}
-        a {text-decoration:none; color: inherit;}
-        ul {list-style:none;}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LÊ THỊ DIỆU XUÂN – Chuyên viên Trồng trọt & Bảo vệ thực vật</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & Global */
+    * {margin:0; padding:0; box-sizing:border-box;}
+    body {font-family:'Roboto', sans-serif; line-height:1.6; color:#333; scroll-behavior:smooth;}
+    a {text-decoration:none; color:inherit;}
+    ul {list-style:none;}
 
-        /* --- HEADER / HERO --- */
-        header {
-            background: linear-gradient(rgba(0,128,0,0.7), rgba(0,128,0,0.7)), url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
-            color:white; height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;
-        }
-        header h1 {font-size:3rem; margin-bottom:10px;}
-        header p {font-size:1.5rem; margin-bottom:20px;}
-        .btn-contact {
-            background:#fff; color:#008000; padding:10px 25px; border-radius:25px; font-weight:bold; transition:0.3s;
-        }
-        .btn-contact:hover {background:#008000; color:#fff;}
+    /* Header */
+    header {
+      background: #4CAF50;
+      color: #fff;
+      padding: 80px 20px 40px;
+      text-align: center;
+    }
+    header h1 {font-family:'Montserrat', sans-serif; font-size:2.5rem; margin-bottom:10px;}
+    header h2 {font-size:1.2rem; margin-bottom:20px; font-weight:500;}
+    header .contact {margin-top:10px;}
+    header .contact a {margin:0 10px; color:#fff;}
 
-        /* --- NAVIGATION --- */
-        nav {
-            position:fixed; top:0; width:100%; background:#008000; color:white; padding:10px 20px; display:flex; justify-content:flex-end; z-index:1000;
-        }
-        nav a {margin-left:20px; color:white; font-weight:bold;}
-        nav a:hover {text-decoration:underline;}
+    /* Navigation */
+    nav {
+      position: fixed;
+      top:0; left:0; width:100%;
+      background:#fff;
+      border-bottom:1px solid #ddd;
+      display:flex; justify-content:center; z-index:999;
+    }
+    nav ul {display:flex;}
+    nav li {margin:0 15px;}
+    nav a {display:block; padding:15px 0; font-weight:500; color:#333;}
+    nav a:hover {color:#4CAF50;}
 
-        /* --- SECTION --- */
-        section {padding:80px 20px; max-width:1000px; margin:0 auto;}
-        section h2 {color:#008000; margin-bottom:20px; font-size:2rem; text-align:center;}
-        section p {margin-bottom:15px; text-align:justify;}
+    /* Section */
+    section {padding:80px 20px;}
+    section h2 {text-align:center; font-family:'Montserrat', sans-serif; font-size:2rem; margin-bottom:40px; color:#4CAF50;}
+    .container {max-width:1000px; margin:0 auto;}
 
-        /* --- ABOUT --- */
-        #about img {width:200px; border-radius:50%; display:block; margin:0 auto 20px;}
+    /* About Me */
+    #about {background:#f4f4f4;}
+    #about .about-content {display:flex; flex-wrap:wrap; align-items:center; gap:30px;}
+    #about img {flex:1 1 250px; max-width:250px; border-radius:10px;}
+    #about .text {flex:2 1 500px;}
 
-        /* --- LIST ICONS --- */
-        ul.skills li::before {content:"✔ "; color:#008000;}
-        ul.projects li::before {content:"• "; color:#008000;}
+    /* Skills & Expertise */
+    .grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px;}
+    .card {background:#fff; padding:20px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+    .card h3 {margin-bottom:15px; color:#4CAF50;}
 
-        /* --- FOOTER --- */
-        footer {background:#f4f4f4; padding:20px; text-align:center; color:#555;}
-    </style>
+    /* Timeline */
+    .timeline {position:relative; padding-left:30px;}
+    .timeline::before {content:""; position:absolute; top:0; left:15px; width:2px; height:100%; background:#4CAF50;}
+    .timeline-item {position:relative; margin-bottom:40px; padding-left:20px;}
+    .timeline-item::before {content:""; position:absolute; left:-7px; top:5px; width:14px; height:14px; background:#4CAF50; border-radius:50%;}
+
+    /* Footer */
+    footer {background:#333; color:#fff; text-align:center; padding:40px 20px;}
+    footer a {color:#4CAF50;}
+
+    /* Responsive */
+    @media(max-width:768px){
+      #about .about-content {flex-direction:column; text-align:center;}
+      #about img {margin:0 auto;}
+    }
+  </style>
 </head>
 <body>
 
-<!-- NAVIGATION -->
+<!-- Navigation -->
 <nav>
-    <a href="#about">Giới thiệu</a>
-    <a href="#skills">Lĩnh vực</a>
-    <a href="#experience">Kinh nghiệm</a>
-    <a href="#projects">Dự án</a>
-    <a href="#contact">Liên hệ</a>
+  <ul>
+    <li><a href="#about">Giới thiệu</a></li>
+    <li><a href="#expertise">Chuyên môn</a></li>
+    <li><a href="#experience">Kinh nghiệm</a></li>
+    <li><a href="#education">Học vấn</a></li>
+    <li><a href="#contact">Liên hệ</a></li>
+  </ul>
 </nav>
 
-<!-- HERO -->
+<!-- Header -->
 <header>
-    <h1>Lê Thị Diệu Xuân</h1>
-    <p>Chuyên viên Trồng trọt & Bảo vệ thực vật</p>
-    <p>“Theo đuổi khoa học, đồng hành cùng nông dân”</p>
-    <a href="#contact" class="btn-contact">Liên hệ tôi</a>
+  <h1>LÊ THỊ DIỆU XUÂN</h1>
+  <h2>Chuyên viên Trồng trọt & Bảo vệ thực vật</h2>
+  <p>Theo đuổi khoa học, đồng hành cùng nông dân.</p>
+  <div class="contact">
+    <a href="mailto:dieuxuanlesrppc@gmail.com">📧 Email</a>
+    <a href="tel:0907525758">📞 Điện thoại</a>
+  </div>
 </header>
 
-<!-- ABOUT -->
+<!-- About Me -->
 <section id="about">
-    <h2>Giới thiệu bản thân</h2>
-    <img src="https://images.unsplash.com/photo-1603415526960-fb4a74a2d6b1?auto=format&fit=crop&w=400&q=80" alt="Ảnh cá nhân">
-    <p>Tôi là chuyên viên trong lĩnh vực trồng trọt và bảo vệ thực vật, gắn bó với công tác giám sát, dự báo sâu bệnh hại trên cây trồng và chuyển giao tiến bộ kỹ thuật đến nông dân. Tôi hướng đến việc áp dụng các giải pháp khoa học phù hợp với thực tiễn sản xuất, góp phần nâng cao hiệu quả canh tác và xây dựng nền nông nghiệp an toàn, bền vững.</p>
+  <h2>Giới thiệu về tôi</h2>
+  <div class="container about-content">
+    <img src="https://via.placeholder.com/250x250.png?text=Ảnh+Chân+Dung" alt="Lê Thị Diệu Xuân">
+    <div class="text">
+      <p>Tôi là chuyên viên trong lĩnh vực trồng trọt và bảo vệ thực vật, hiện đang công tác tại Trung tâm Trồng trọt và Bảo vệ thực vật phía Nam. Tôi gắn bó với công tác giám sát, dự báo sâu bệnh hại trên cây trồng và chuyển giao các tiến bộ kỹ thuật đến nông dân. Tôi hướng đến việc áp dụng các giải pháp khoa học phù hợp với thực tiễn sản xuất, góp phần nâng cao hiệu quả canh tác và xây dựng nền nông nghiệp an toàn, bền vững.</p>
+      <p>Gắn bó với nông nghiệp từ thực tiễn sản xuất, tôi lựa chọn công việc trong lĩnh vực trồng trọt và bảo vệ thực vật như một hành trình lâu dài nhằm đóng góp thiết thực cho người nông dân và sự phát triển bền vững của ngành nông nghiệp.</p>
+    </div>
+  </div>
 </section>
 
-<!-- SKILLS / LĨNH VỰC CHUYÊN MÔN -->
-<section id="skills">
-    <h2>Lĩnh vực chuyên môn</h2>
-    <ul class="skills">
-        <li>Giám sát và dự báo sâu bệnh hại trên cây trồng</li>
-        <li>Nhận diện sâu hại chính, thiên địch, bệnh hại và cỏ dại trên lúa</li>
-        <li>Chuyển giao tiến bộ kỹ thuật và hoạt động khuyến nông</li>
-        <li>Kiểm dịch thực vật và đánh giá nguy cơ sinh vật gây hại</li>
-        <li>Bảo vệ thực vật theo hướng an toàn, sinh thái và bền vững</li>
-    </ul>
+<!-- Expertise -->
+<section id="expertise">
+  <h2>Lĩnh vực chuyên môn</h2>
+  <div class="container grid">
+    <div class="card"><h3>Giám sát & dự báo sâu bệnh</h3><p>Giám sát và dự báo sâu bệnh hại trên cây trồng.</p></div>
+    <div class="card"><h3>Nhận diện sinh vật</h3><p>Nhận diện sâu hại, thiên địch, bệnh hại và cỏ dại.</p></div>
+    <div class="card"><h3>Chuyển giao kỹ thuật</h3><p>Hỗ trợ nông dân áp dụng tiến bộ kỹ thuật.</p></div>
+    <div class="card"><h3>Kiểm dịch thực vật</h3><p>Đánh giá nguy cơ sinh vật gây hại, bảo đảm an toàn sinh học.</p></div>
+    <div class="card"><h3>Bảo vệ sinh thái</h3><p>Bảo vệ thực vật theo hướng an toàn, sinh thái và bền vững.</p></div>
+  </div>
 </section>
 
-<!-- EXPERIENCE -->
+<!-- Experience -->
 <section id="experience">
-    <h2>Kinh nghiệm công tác</h2>
-    <ul class="projects">
-        <li>Trung tâm Trồng trọt và Bảo vệ thực vật phía Nam – Giám sát sản xuất cây trồng, dự báo sâu bệnh và hỗ trợ kỹ thuật tại địa phương</li>
-        <li>Trung tâm Kiểm dịch thực vật sau nhập khẩu II, TP.HCM – Phân tích nguy cơ dịch hại, hỗ trợ mở cửa thị trường nông sản, giám định sinh vật gây hại</li>
-    </ul>
+  <h2>Kinh nghiệm công tác</h2>
+  <div class="container timeline">
+    <div class="timeline-item">
+      <h3>Chuyên viên – Trung tâm Trồng trọt và Bảo vệ thực vật phía Nam (Đồng Tháp)</h3>
+      <p>Giám sát sản xuất cây trồng, dự báo sâu bệnh hại và hỗ trợ kỹ thuật tại địa phương.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>Chuyên viên – Trung tâm Kiểm dịch thực vật sau nhập khẩu II (TP. Hồ Chí Minh)</h3>
+      <p>Phân tích nguy cơ dịch hại, hỗ trợ mở cửa thị trường nông sản, giám định sinh vật gây hại.</p>
+    </div>
+  </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects">
-    <h2>Dự án tiêu biểu</h2>
-    <ul class="projects">
-        <li>Ecological Engineering in Rice Production – Demonstration, Dissemination and Application</li>
-        <li>APPPC Training Workshop on Fruit Fly Management</li>
-        <li>IPM & IPHM Training of the Trainers (TOT)</li>
-        <li>Dự án LEGATO – Đánh giá rủi ro và cơ hội trong hệ thống lúa tưới tại châu Á</li>
-        <li>Ecological management of rodents, weeds, insects and birds in rice agro-ecosystems (IRRI, Philippines)</li>
-    </ul>
+<!-- Education -->
+<section id="education">
+  <h2>Học vấn & Chứng chỉ</h2>
+  <div class="container grid">
+    <div class="card"><h3>Thạc sĩ Trồng trọt</h3><p>Đại học Cần Thơ</p></div>
+    <div class="card"><h3>Cử nhân Nông học</h3><p>Đại học Cần Thơ</p></div>
+    <div class="card"><h3>Văn bằng 2 Ngôn ngữ Anh</h3></div>
+  </div>
 </section>
 
-<!-- CONTACT -->
+<!-- Contact -->
 <section id="contact">
-    <h2>Liên hệ</h2>
-    <p>Email: <a href="mailto:dieuxuanlesrppc@gmail.com">dieuxuanlesrppc@gmail.com</a></p>
-    <p>Điện thoại: 0907 525 758</p>
-    <p>Trung tâm Trồng trọt và Bảo vệ thực vật phía Nam, Đồng Tháp</p>
+  <h2>Liên hệ</h2>
+  <div class="container" style="text-align:center;">
+    <p>Trung tâm Trồng trọt và Bảo vệ thực vật phía Nam</p>
+    <p>Ấp Mới, xã Long Định, tỉnh Đồng Tháp</p>
+    <p>📧 <a href="mailto:dieuxuanlesrppc@gmail.com">dieuxuanlesrppc@gmail.com</a></p>
+    <p>📞 0907 525 758</p>
+    <p style="margin-top:20px;"><em>“Khoa học chỉ thực sự có ý nghĩa khi gắn liền với thực tiễn sản xuất và mang lại lợi ích thiết thực cho người nông dân.”</em></p>
+  </div>
 </section>
 
-<!-- FOOTER -->
+<!-- Footer -->
 <footer>
-    &copy; 2025 Lê Thị Diệu Xuân. All rights reserved.
+  <p>© 2025 Lê Thị Diệu Xuân | Designed with ❤️</p>
 </footer>
 
 </body>
