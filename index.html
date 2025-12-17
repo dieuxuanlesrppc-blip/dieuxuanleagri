@@ -1,144 +1,130 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LÊ THỊ DIỆU XUÂN – Website cá nhân</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LÊ THỊ DIỆU XUÂN - Chuyên viên Trồng trọt & Bảo vệ thực vật</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * {margin:0; padding:0; box-sizing:border-box; font-family:'Roboto', sans-serif;}
+  body {scroll-behavior:smooth; background:#f5f5f5;}
+  nav {
+    display:flex; justify-content:center; gap:18px;
+    background:rgba(255,255,255,0.95); padding:12px; position:sticky; top:0; z-index:1000;
+  }
+  nav a {text-decoration:none; color:#2E7D32; font-weight:700; padding:6px 12px;}
+  nav a:hover {background:#C8E6C9; border-radius:5px;}
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  header {
+    height:80vh; background:url('https://images.unsplash.com/photo-1604168936927-9a5b742b7ed1?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+    display:flex; align-items:center; justify-content:center; text-align:center; color:white;
+    flex-direction:column; padding:0 20px;
+  }
+  header h1 {font-size:3em; margin-bottom:10px;}
+  header p {font-size:1.5em; margin-bottom:20px;}
+  header a {padding:12px 25px; background:rgba(0,128,0,0.7); color:white; text-decoration:none; border-radius:6px;}
 
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/1c5f5f7e32.js" crossorigin="anonymous"></script>
+  section {padding:70px 20px; max-width:1100px; margin:0 auto; background:white; border-radius:8px; margin-bottom:40px; box-shadow:0 2px 10px rgba(0,0,0,0.1);}
+  h2 {text-align:center; margin-bottom:40px; color:#2E7D32;}
 
-  <style>
-    /* Base */
-    * {margin:0; padding:0; box-sizing:border-box;}
-    body {font-family:'Roboto', sans-serif; line-height:1.6; color:#333; scroll-behavior:smooth; background:#f0f8ff;}
-    a {text-decoration:none; color:inherit;}
-    h2 {font-family:'Montserrat', sans-serif; color:#4caf50; margin-bottom:30px; text-align:center;}
-    
-    /* Navigation */
-    nav {position:fixed; top:0; left:0; width:100%; background:rgba(255,255,255,0.95); border-bottom:1px solid #ddd; display:flex; justify-content:center; z-index:999; backdrop-filter: blur(5px);}
-    nav ul {display:flex; flex-wrap:wrap;}
-    nav li {margin:0 15px;}
-    nav a {display:block; padding:15px 0; font-weight:500; color:#333;}
-    nav a:hover {color:#4caf50;}
+  /* About */
+  .about p {line-height:1.6; margin-bottom:12px;}
+  .skills ul {list-style:none; display:flex; flex-wrap:wrap; justify-content:center; gap:15px;}
+  .skills li {background:#C8E6C9; padding:10px 15px; border-radius:5px;}
 
-    /* Hero Banner */
-    header {background:url('https://images.unsplash.com/photo-1569058243130-0408f8f3b097?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600') center/cover no-repeat fixed; height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; color:white; text-align:center; text-shadow:2px 2px 6px rgba(0,0,0,0.5);}
-    header h1 {font-family:'Montserrat', sans-serif; font-size:3rem; margin-bottom:10px;}
-    header h2 {font-size:1.5rem; margin-bottom:20px; font-weight:500;}
-    .btn {background:#4caf50; padding:12px 25px; border-radius:25px; color:white; font-weight:500; margin:5px; transition:0.3s;}
-    .btn:hover {background:#45a049; transform:scale(1.05);}
+  /* Projects & Videos */
+  .projects, .videos {display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:20px;}
+  .project-card, .video-card {
+    background:#E8F5E9; padding:18px; border-radius:8px; text-align:center; transition:0.3s;
+  }
+  .project-card:hover, .video-card:hover {transform:translateY(-4px); box-shadow:0 4px 12px rgba(0,0,0,0.2);}
 
-    /* Sections */
-    section {padding:100px 20px;}
-    .container {max-width:1000px; margin:0 auto;}
+  /* Contact */
+  .contact form {display:flex; flex-direction:column; gap:14px; max-width:500px; margin:auto;}
+  .contact input, .contact textarea {padding:10px; border:1px solid #ccc; border-radius:6px;}
+  .contact button {padding:12px; background:#2E7D32; color:white; border:none; border-radius:6px; cursor:pointer;}
+  .contact button:hover {background:#1B5E20;}
 
-    /* About */
-    .about-content {display:flex; flex-wrap:wrap; align-items:center; gap:30px;}
-    .about-content img {flex:1 1 250px; max-width:250px; border-radius:10px;}
-    .about-content .text {flex:2 1 500px;}
-
-    /* Grid Cards */
-    .grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px;}
-    .card {background:#fff; padding:20px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1); transition:0.3s;}
-    .card:hover {transform:translateY(-5px) scale(1.03); box-shadow:0 4px 12px rgba(0,0,0,0.2);}
-    .card h3 {margin-bottom:15px; color:#4caf50; display:flex; align-items:center; gap:10px;}
-    .card p {color:#333;}
-
-    /* Timeline / Experience */
-    .timeline {position:relative; padding-left:30px; border-left:2px solid #4caf50;}
-    .timeline-item {position:relative; margin-bottom:40px; padding-left:20px;}
-    .timeline-item::before {content:""; position:absolute; left:-9px; top:5px; width:18px; height:18px; background:#4caf50; border-radius:50%; border:3px solid #fff;}
-
-    /* Contact */
-    #contact {background:#e8f5e9; text-align:center; border-radius:10px; padding:60px 20px;}
-    #contact a {color:#4caf50; font-weight:500;}
-
-    /* Footer */
-    footer {background:#4caf50; color:white; text-align:center; padding:40px 20px;}
-    footer a {color:#ffd700;}
-
-    /* Responsive */
-    @media(max-width:768px){
-      .about-content {flex-direction:column; text-align:center;}
-      .about-content img {margin:0 auto;}
-    }
-  </style>
+  /* Responsive */
+  @media(max-width:768px){
+    header h1{font-size:2.2em;}
+    header p{font-size:1.2em;}
+  }
+</style>
 </head>
 <body>
 
-<!-- Navigation -->
 <nav>
-  <ul>
-    <li><a href="#home">Trang chủ</a></li>
-    <li><a href="#about">Giới thiệu</a></li>
-    <li><a href="#research">Đề tài nghiên cứu</a></li>
-    <li><a href="#video">Video tuyên truyền</a></li>
-    <li><a href="#contact">Liên hệ</a></li>
-  </ul>
+  <a href="#home">Trang chủ</a>
+  <a href="#about">Giới thiệu</a>
+  <a href="#projects">Đề tài nghiên cứu</a>
+  <a href="#videos">Video</a>
+  <a href="#contact">Liên hệ</a>
 </nav>
 
-<!-- Hero Banner / Home -->
 <header id="home">
-  <h1><i class="fas fa-seedling"></i> LÊ THỊ DIỆU XUÂN</h1>
-  <h2>Chuyên viên Trồng trọt & Bảo vệ thực vật</h2>
-  <a href="#contact" class="btn">📩 Liên hệ ngay</a>
+  <h1>LÊ THỊ DIỆU XUÂN</h1>
+  <p>Chuyên viên Trồng trọt & Bảo vệ thực vật</p>
+  <a href="#about">Tìm hiểu thêm</a>
 </header>
 
-<!-- About Me -->
-<section id="about">
-  <h2><i class="fas fa-user"></i> Giới thiệu</h2>
-  <div class="container about-content">
-    <img src="https://via.placeholder.com/250x250.png?text=Ảnh+Chân+Dung" alt="Lê Thị Diệu Xuân">
-    <div class="text">
-      <p>Tôi là chuyên viên trong lĩnh vực trồng trọt và bảo vệ thực vật, hiện đang công tác tại Trung tâm Trồng trọt và Bảo vệ thực vật phía Nam. Tôi gắn bó với công tác giám sát, dự báo sâu bệnh hại trên cây trồng và chuyển giao các tiến bộ kỹ thuật đến nông dân. Tôi hướng đến việc áp dụng các giải pháp khoa học phù hợp với thực tiễn sản xuất, góp phần nâng cao hiệu quả canh tác và xây dựng nền nông nghiệp an toàn, bền vững.</p>
-    </div>
+<section id="about" class="about">
+  <h2>Giới thiệu</h2>
+  <p>Tôi là chuyên viên trong lĩnh vực trồng trọt và bảo vệ thực vật, hiện đang công tác tại Trung tâm Trồng trọt và Bảo vệ thực vật phía Nam. Tôi gắn bó với công tác giám sát, dự báo sâu bệnh hại trên cây trồng và chuyển giao các tiến bộ kỹ thuật đến nông dân. Tôi hướng đến việc áp dụng các giải pháp khoa học phù hợp với thực tiễn sản xuất, góp phần nâng cao hiệu quả canh tác và xây dựng nền nông nghiệp an toàn, bền vững.</p>
+  <h3>Lĩnh vực chuyên môn</h3>
+  <div class="skills">
+    <ul>
+      <li>Giám sát & dự báo sâu bệnh hại</li>
+      <li>Nhận diện sâu hại chính, thiên địch, bệnh hại & cỏ dại</li>
+      <li>Chuyển giao tiến bộ kỹ thuật & khuyến nông</li>
+      <li>Kiểm dịch thực vật & đánh giá nguy cơ</li>
+      <li>Bảo vệ thực vật an toàn & bền vững</li>
+      <li>Duy trì sức khỏe đất & nâng cao năng suất</li>
+    </ul>
+  </div>
+  <h3>Giá trị nghề nghiệp / Triết lý làm việc</h3>
+  <p>Tôi luôn đặt tính khoa học, sự phù hợp với điều kiện thực tế và lợi ích của người nông dân làm trọng tâm trong công việc. Theo tôi, mỗi giải pháp kỹ thuật chỉ thực sự có ý nghĩa khi dễ áp dụng, mang lại hiệu quả lâu dài và góp phần bảo vệ hệ sinh thái nông nghiệp.</p>
+</section>
+
+<section id="projects" class="projects">
+  <h2>Đề tài nghiên cứu</h2>
+  <div class="project-card">
+    <h3>Ecological Engineering in Rice Production</h3>
+    <p>Demonstration, Dissemination and Application</p>
+  </div>
+  <div class="project-card">
+    <h3>APPPC Training Workshop on Fruit Fly Management</h3>
+  </div>
+  <div class="project-card">
+    <h3>IPM & IPHM Training of the Trainers (TOT)</h3>
+  </div>
+  <div class="project-card">
+    <h3>Dự án LEGATO – Đánh giá rủi ro và cơ hội trong hệ thống lúa tưới tại châu Á</h3>
+  </div>
+  <div class="project-card">
+    <h3>Ecological management of rodents, weeds, insects and birds in rice agro-ecosystems (IRRI, Philippines)</h3>
   </div>
 </section>
 
-<!-- Research / Projects -->
-<section id="research">
-  <h2><i class="fas fa-project-diagram"></i> Đề tài nghiên cứu</h2>
-  <div class="container grid">
-    <div class="card"><h3><i class="fas fa-seedling"></i> Ecological Engineering in Rice Production</h3><p>Triển khai mô hình sinh thái trong sản xuất lúa, hướng dẫn nông dân áp dụng kỹ thuật bền vững.</p></div>
-    <div class="card"><h3><i class="fas fa-apple-alt"></i> APPPC Training Workshop</h3><p>Đào tạo kỹ thuật quản lý ruồi đục quả cho cán bộ và nông dân.</p></div>
-    <div class="card"><h3><i class="fas fa-leaf"></i> IPM & IPHM TOT</h3><p>Đào tạo giảng viên về quản lý dịch hại tổng hợp cho cây trồng.</p></div>
-    <div class="card"><h3><i class="fas fa-tractor"></i> Dự án LEGATO</h3><p>Đánh giá rủi ro và cơ hội trong hệ thống lúa tưới tại châu Á.</p></div>
-  </div>
+<section id="videos" class="videos">
+  <h2>Video Tuyên truyền</h2>
+  <div class="video-card"><h3>IPM Training Video</h3></div>
+  <div class="video-card"><h3>Ecological Management of Rodents & Weeds in Rice</h3></div>
 </section>
 
-<!-- Video -->
-<section id="video">
-  <h2><i class="fas fa-video"></i> Video tuyên truyền</h2>
-  <div class="container grid">
-    <div class="card">
-      <h3><i class="fas fa-play-circle"></i> Hướng dẫn chăm sóc lúa</h3>
-      <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video Hướng dẫn" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="card">
-      <h3><i class="fas fa-play-circle"></i> Quản lý sâu bệnh trên cây ăn trái</h3>
-      <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video Hướng dẫn" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
+<section id="contact" class="contact">
+  <h2>Liên hệ</h2>
+  <p>Trung tâm Trồng trọt và Bảo vệ thực vật phía Nam</p>
+  <p>Ấp Mới, xã Long Định, tỉnh Đồng Tháp</p>
+  <p>📧 dieuxuanlesrppc@gmail.com | 📞 0907 525 758</p>
+  <form>
+    <input type="text" placeholder="Họ và tên" required>
+    <input type="email" placeholder="Email" required>
+    <textarea placeholder="Nội dung" rows="5" required></textarea>
+    <button type="submit">Gửi liên hệ</button>
+  </form>
+  <p style="margin-top:20px; text-align:center; font-style:italic;">“Tôi tin rằng khoa học chỉ thực sự có ý nghĩa khi gắn liền với thực tiễn sản xuất và mang lại lợi ích thiết thực cho người nông dân.”</p>
 </section>
-
-<!-- Contact -->
-<section id="contact">
-  <h2><i class="fas fa-envelope"></i> Liên hệ</h2>
-  <div class="container">
-    <p>📧 <a href="mailto:dieuxuanlesrppc@gmail.com">dieuxuanlesrppc@gmail.com</a></p>
-    <p>📞 0907 525 758</p>
-    <p><em>“Khoa học chỉ thực sự có ý nghĩa khi gắn liền với thực tiễn sản xuất và mang lại lợi ích thiết thực cho người nông dân.”</em></p>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer>
-  <p>© 2025 Lê Thị Diệu Xuân | Designed with ❤️</p>
-</footer>
 
 </body>
 </html>
