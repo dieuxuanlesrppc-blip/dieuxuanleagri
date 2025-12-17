@@ -4,42 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LÊ THỊ DIỆU XUÂN – Chuyên viên Trồng trọt & Bảo vệ thực vật</title>
+  <!-- Font Google -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/1c5f5f7e32.js" crossorigin="anonymous"></script>
   <style>
     * {margin:0; padding:0; box-sizing:border-box;}
     body {font-family:'Roboto', sans-serif; line-height:1.6; color:#333; scroll-behavior:smooth;}
-
     a {text-decoration:none; color:inherit;}
     ul {list-style:none;}
-
-    /* Header / Hero Banner */
-    header {
-      background: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8ZmllbGQtbm9ydGhpY2FsfHx8fHx8MTY5Nzk3MzA1NA&ixlib=rb-4.0.3&q=80&w=1600') center/cover no-repeat fixed;
-      height:100vh;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-      color:white;
-      text-align:center;
-    }
-    header h1 {font-family:'Montserrat', sans-serif; font-size:3rem; margin-bottom:10px; text-shadow:2px 2px 5px rgba(0,0,0,0.5);}
-    header h2 {font-size:1.5rem; margin-bottom:20px; font-weight:500; text-shadow:1px 1px 3px rgba(0,0,0,0.5);}
-    header .btn-contact {
-      background:#4CAF50;
-      padding:12px 25px;
-      border-radius:25px;
-      color:white;
-      font-weight:500;
-      transition:0.3s;
-    }
-    header .btn-contact:hover {background:#388E3C;}
 
     /* Navigation */
     nav {
       position:fixed;
       top:0; left:0; width:100%;
-      background:rgba(255,255,255,0.9);
+      background:rgba(255,255,255,0.95);
       border-bottom:1px solid #ddd;
       display:flex; justify-content:center; z-index:999;
       backdrop-filter: blur(5px);
@@ -49,9 +28,45 @@
     nav a {display:block; padding:15px 0; font-weight:500; color:#333;}
     nav a:hover {color:#4CAF50;}
 
+    /* Hero Banner */
+    header {
+      background: url('https://images.unsplash.com/photo-1587194346982-f14b1ed1e1f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8ZmllbGQtbHVhfHx8fHx8MTY5Nzk4MDI4OA&ixlib=rb-4.0.3&q=80&w=1600') center/cover no-repeat fixed;
+      height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      color:white;
+      text-align:center;
+      text-shadow:2px 2px 6px rgba(0,0,0,0.5);
+    }
+    header h1 {font-family:'Montserrat', sans-serif; font-size:3rem; margin-bottom:10px;}
+    header h2 {font-size:1.5rem; margin-bottom:20px; font-weight:500;}
+    header .btn-contact {
+      background:#FFD700; /* vàng nổi bật */
+      padding:12px 25px;
+      border-radius:25px;
+      color:#333;
+      font-weight:500;
+      transition:0.3s;
+    }
+    header .btn-contact:hover {background:#FFC107;}
+
+    /* Section titles */
+    section h2 {
+      text-align:center;
+      font-family:'Montserrat', sans-serif;
+      font-size:2rem;
+      margin-bottom:40px;
+      color:#4CAF50;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:10px;
+    }
+
     /* Sections */
     section {padding:80px 20px;}
-    section h2 {text-align:center; font-family:'Montserrat', sans-serif; font-size:2rem; margin-bottom:40px; color:#4CAF50;}
     .container {max-width:1000px; margin:0 auto;}
 
     /* About Me */
@@ -64,7 +79,7 @@
     .grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px;}
     .card {background:#fff; padding:20px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1); transition:0.3s;}
     .card:hover {transform:translateY(-5px); box-shadow:0 4px 12px rgba(0,0,0,0.2);}
-    .card h3 {margin-bottom:15px; color:#4CAF50;}
+    .card h3 {margin-bottom:15px; color:#4CAF50; display:flex; align-items:center; gap:10px;}
 
     /* Portfolio */
     .portfolio {display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px;}
@@ -77,9 +92,13 @@
     .timeline-item {position:relative; margin-bottom:40px; padding-left:20px;}
     .timeline-item::before {content:""; position:absolute; left:-7px; top:5px; width:14px; height:14px; background:#4CAF50; border-radius:50%;}
 
+    /* Contact */
+    #contact {background:#e8f5e9; text-align:center;}
+    #contact a {color:#4CAF50; font-weight:500;}
+
     /* Footer */
     footer {background:#333; color:#fff; text-align:center; padding:40px 20px;}
-    footer a {color:#4CAF50;}
+    footer a {color:#FFD700;}
 
     /* Responsive */
     @media(max-width:768px){
@@ -103,14 +122,14 @@
 
 <!-- Hero Banner -->
 <header>
-  <h1>LÊ THỊ DIỆU XUÂN</h1>
+  <h1><i class="fas fa-seedling"></i> LÊ THỊ DIỆU XUÂN</h1>
   <h2>Chuyên viên Trồng trọt & Bảo vệ thực vật</h2>
   <a href="#contact" class="btn-contact">Liên hệ ngay</a>
 </header>
 
 <!-- About Me -->
 <section id="about">
-  <h2>Giới thiệu về tôi</h2>
+  <h2><i class="fas fa-user"></i> Giới thiệu về tôi</h2>
   <div class="container about-content">
     <img src="https://via.placeholder.com/250x250.png?text=Ảnh+Chân+Dung" alt="Lê Thị Diệu Xuân">
     <div class="text">
@@ -122,19 +141,19 @@
 
 <!-- Expertise -->
 <section id="expertise">
-  <h2>Lĩnh vực chuyên môn</h2>
+  <h2><i class="fas fa-lightbulb"></i> Lĩnh vực chuyên môn</h2>
   <div class="container grid">
-    <div class="card"><h3>Giám sát & dự báo sâu bệnh</h3><p>Giám sát và dự báo sâu bệnh hại trên cây trồng.</p></div>
-    <div class="card"><h3>Nhận diện sinh vật</h3><p>Nhận diện sâu hại, thiên địch, bệnh hại và cỏ dại.</p></div>
-    <div class="card"><h3>Chuyển giao kỹ thuật</h3><p>Hỗ trợ nông dân áp dụng tiến bộ kỹ thuật.</p></div>
-    <div class="card"><h3>Kiểm dịch thực vật</h3><p>Đánh giá nguy cơ sinh vật gây hại, bảo đảm an toàn sinh học.</p></div>
-    <div class="card"><h3>Bảo vệ sinh thái</h3><p>Bảo vệ thực vật theo hướng an toàn, sinh thái và bền vững.</p></div>
+    <div class="card"><h3><i class="fas fa-bug"></i> Giám sát & dự báo sâu bệnh</h3><p>Giám sát và dự báo sâu bệnh hại trên cây trồng.</p></div>
+    <div class="card"><h3><i class="fas fa-leaf"></i> Nhận diện sinh vật</h3><p>Nhận diện sâu hại, thiên địch, bệnh hại và cỏ dại.</p></div>
+    <div class="card"><h3><i class="fas fa-chalkboard-teacher"></i> Chuyển giao kỹ thuật</h3><p>Hỗ trợ nông dân áp dụng tiến bộ kỹ thuật.</p></div>
+    <div class="card"><h3><i class="fas fa-shield-alt"></i> Kiểm dịch thực vật</h3><p>Đánh giá nguy cơ sinh vật gây hại, bảo đảm an toàn sinh học.</p></div>
+    <div class="card"><h3><i class="fas fa-tree"></i> Bảo vệ sinh thái</h3><p>Bảo vệ thực vật theo hướng an toàn, sinh thái và bền vững.</p></div>
   </div>
 </section>
 
 <!-- Portfolio -->
 <section id="portfolio">
-  <h2>Dự án tiêu biểu</h2>
+  <h2><i class="fas fa-project-diagram"></i> Dự án tiêu biểu</h2>
   <div class="container portfolio">
     <img src="https://via.placeholder.com/400x250.png?text=Dự+án+1" alt="Dự án 1">
     <img src="https://via.placeholder.com/400x250.png?text=Dự+án+2" alt="Dự án 2">
@@ -145,7 +164,7 @@
 
 <!-- Experience -->
 <section id="experience">
-  <h2>Kinh nghiệm công tác</h2>
+  <h2><i class="fas fa-briefcase"></i> Kinh nghiệm công tác</h2>
   <div class="container timeline">
     <div class="timeline-item">
       <h3>Chuyên viên – Trung tâm Trồng trọt và Bảo vệ thực vật phía Nam (Đồng Tháp)</h3>
@@ -160,8 +179,8 @@
 
 <!-- Contact -->
 <section id="contact">
-  <h2>Liên hệ</h2>
-  <div class="container" style="text-align:center;">
+  <h2><i class="fas fa-envelope"></i> Liên hệ</h2>
+  <div class="container">
     <p>Trung tâm Trồng trọt và Bảo vệ thực vật phía Nam</p>
     <p>Ấp Mới, xã Long Định, tỉnh Đồng Tháp</p>
     <p>📧 <a href="mailto:dieuxuanlesrppc@gmail.com">dieuxuanlesrppc@gmail.com</a></p>
