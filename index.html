@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LÊ THỊ DIỆU XUÂN – Chuyên viên Trồng trọt & Bảo vệ thực vật</title>
-  <!-- Font Google -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto&display=swap" rel="stylesheet">
   <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/1c5f5f7e32.js" crossorigin="anonymous"></script>
@@ -42,17 +42,18 @@
     }
     header h1 {font-family:'Montserrat', sans-serif; font-size:3rem; margin-bottom:10px;}
     header h2 {font-size:1.5rem; margin-bottom:20px; font-weight:500;}
-    header .btn-contact {
-      background:#FFD700; /* vàng nổi bật */
+    header .btn-contact, header .btn-cv {
+      background:#FFD700;
       padding:12px 25px;
       border-radius:25px;
       color:#333;
       font-weight:500;
+      margin:5px;
       transition:0.3s;
     }
-    header .btn-contact:hover {background:#FFC107;}
+    header .btn-contact:hover, header .btn-cv:hover {background:#FFC107; transform:scale(1.05);}
 
-    /* Section titles */
+    /* Section Titles */
     section h2 {
       text-align:center;
       font-family:'Montserrat', sans-serif;
@@ -65,35 +66,39 @@
       gap:10px;
     }
 
-    /* Sections */
     section {padding:80px 20px;}
     .container {max-width:1000px; margin:0 auto;}
 
     /* About Me */
     #about {background:#f4f4f4;}
-    #about .about-content {display:flex; flex-wrap:wrap; align-items:center; gap:30px;}
+    #about .about-content {display:flex; flex-wrap:wrap; align-items:center; gap:30px; opacity:0; transform:translateY(30px); transition:1s;}
+    #about .about-content.visible {opacity:1; transform:translateY(0);}
     #about img {flex:1 1 250px; max-width:250px; border-radius:10px;}
     #about .text {flex:2 1 500px;}
 
     /* Expertise / Skills */
     .grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px;}
-    .card {background:#fff; padding:20px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1); transition:0.3s;}
-    .card:hover {transform:translateY(-5px); box-shadow:0 4px 12px rgba(0,0,0,0.2);}
+    .card {background:#fff; padding:20px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1); transition:0.3s; opacity:0; transform:translateY(30px);}
+    .card:hover {transform:translateY(-5px) scale(1.03); box-shadow:0 4px 12px rgba(0,0,0,0.2);}
+    .card.visible {opacity:1; transform:translateY(0);}
     .card h3 {margin-bottom:15px; color:#4CAF50; display:flex; align-items:center; gap:10px;}
 
     /* Portfolio */
-    .portfolio {display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px;}
+    .portfolio {display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px; opacity:0; transform:translateY(30px); transition:1s;}
+    .portfolio.visible {opacity:1; transform:translateY(0);}
     .portfolio img {width:100%; border-radius:10px; transition:0.3s;}
     .portfolio img:hover {transform:scale(1.05);}
 
     /* Timeline */
-    .timeline {position:relative; padding-left:30px;}
+    .timeline {position:relative; padding-left:30px; opacity:0; transform:translateY(30px); transition:1s;}
+    .timeline.visible {opacity:1; transform:translateY(0);}
     .timeline::before {content:""; position:absolute; top:0; left:15px; width:2px; height:100%; background:#4CAF50;}
     .timeline-item {position:relative; margin-bottom:40px; padding-left:20px;}
     .timeline-item::before {content:""; position:absolute; left:-7px; top:5px; width:14px; height:14px; background:#4CAF50; border-radius:50%;}
 
     /* Contact */
-    #contact {background:#e8f5e9; text-align:center;}
+    #contact {background:#e8f5e9; text-align:center; opacity:0; transform:translateY(30px); transition:1s;}
+    #contact.visible {opacity:1; transform:translateY(0);}
     #contact a {color:#4CAF50; font-weight:500;}
 
     /* Footer */
@@ -124,7 +129,10 @@
 <header>
   <h1><i class="fas fa-seedling"></i> LÊ THỊ DIỆU XUÂN</h1>
   <h2>Chuyên viên Trồng trọt & Bảo vệ thực vật</h2>
-  <a href="#contact" class="btn-contact">Liên hệ ngay</a>
+  <div>
+    <a href="#contact" class="btn-contact">Liên hệ ngay</a>
+    <a href="CV_Lê_Thị_Diệu_Xuân.pdf" target="_blank" class="btn-cv"><i class="fas fa-file-download"></i> Tải CV</a>
+  </div>
 </header>
 
 <!-- About Me -->
@@ -191,8 +199,23 @@
 
 <!-- Footer -->
 <footer>
-  <p>© 2025 Lê Thị Diệu Xuân | Designed with ❤️</p>
+  <p>© 2025 Lê Thị Diệu Xuân | Designed with ❤️ | <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
 </footer>
+
+<script>
+  // Scroll animation
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {threshold:0.2});
+  
+  document.querySelectorAll('.about-content, .card, .portfolio, .timeline, #contact').forEach(el => {
+    observer.observe(el);
+  });
+</script>
 
 </body>
 </html>
