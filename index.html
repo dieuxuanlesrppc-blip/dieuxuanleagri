@@ -3,97 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LÊ THỊ DIỆU XUÂN – Chuyên viên Trồng trọt & Bảo vệ thực vật</title>
-  
+  <title>LÊ THỊ DIỆU XUÂN – Website cá nhân</title>
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome Icons -->
+  <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/1c5f5f7e32.js" crossorigin="anonymous"></script>
-  
+
   <style>
-    /* Reset & base */
     * {margin:0; padding:0; box-sizing:border-box;}
     body {font-family:'Roboto', sans-serif; line-height:1.6; color:#333; scroll-behavior:smooth;}
     a {text-decoration:none; color:inherit;}
-    
-    /* Navigation */
-    nav {
-      position:fixed; top:0; left:0; width:100%;
-      background:rgba(255,255,255,0.95); border-bottom:1px solid #ddd;
-      display:flex; justify-content:center; z-index:999; backdrop-filter: blur(5px);
-    }
-    nav ul {display:flex; flex-wrap:wrap;}
-    nav li {margin:0 15px;}
-    nav a {display:block; padding:15px 0; font-weight:500; color:#333;}
-    nav a:hover {color:#4CAF50;}
-    
-    /* Hero Banner */
-    header {
-      background: url('https://images.unsplash.com/photo-1587194346982-f14b1ed1e1f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8ZmllbGQtbHVhfHx8fHx8MTY5Nzk4MDI4OA&ixlib=rb-4.0.3&q=80&w=1600') center/cover no-repeat fixed;
-      height:100vh; display:flex; flex-direction:column;
-      justify-content:center; align-items:center; color:white; text-align:center;
-      text-shadow:2px 2px 6px rgba(0,0,0,0.5);
-    }
-    header h1 {font-family:'Montserrat', sans-serif; font-size:3rem; margin-bottom:10px;}
-    header h2 {font-size:1.5rem; margin-bottom:20px; font-weight:500;}
-    header .btn-contact, header .btn-cv {
-      background:#FFD700; padding:12px 25px; border-radius:25px;
-      color:#333; font-weight:500; margin:5px; transition:0.3s;
-    }
-    header .btn-contact:hover, header .btn-cv:hover {background:#FFC107; transform:scale(1.05);}
-    
-    /* Section Titles */
-    section h2 {
-      text-align:center; font-family:'Montserrat', sans-serif;
-      font-size:2rem; margin-bottom:40px; color:#4CAF50;
-      display:flex; justify-content:center; align-items:center; gap:10px;
-    }
-    
-    section {padding:80px 20px;}
-    .container {max-width:1000px; margin:0 auto;}
-    
-    /* About Me */
-    #about {background:#f4f4f4;}
-    #about .about-content {display:flex; flex-wrap:wrap; align-items:center; gap:30px; opacity:0; transform:translateY(30px); transition:1s;}
-    #about .about-content.visible {opacity:1; transform:translateY(0);}
-    #about img {flex:1 1 250px; max-width:250px; border-radius:10px;}
-    #about .text {flex:2 1 500px;}
-    
-    /* Expertise / Skills & Portfolio */
-    .grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px;}
-    .card {background:#fff; padding:20px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1); transition:0.3s; opacity:0; transform:translateY(30px);}
-    .card:hover {transform:translateY(-5px) scale(1.03); box-shadow:0 4px 12px rgba(0,0,0,0.2);}
-    .card.visible {opacity:1; transform:translateY(0);}
-    .card h3 {margin-bottom:15px; color:#4CAF50; display:flex; align-items:center; gap:10px;}
-    .card p {color:#333;}
-    
-    /* Timeline */
-    .timeline {position:relative; padding-left:30px; opacity:0; transform:translateY(30px); transition:1s;}
-    .timeline.visible {opacity:1; transform:translateY(0);}
-    .timeline::before {content:""; position:absolute; top:0; left:15px; width:2px; height:100%; background:#4CAF50;}
-    .timeline-item {position:relative; margin-bottom:40px; padding-left:20px;}
-    .timeline-item::before {content:""; position:absolute; left:-7px; top:5px; width:14px; height:14px; background:#4CAF50; border-radius:50%;}
-    
-    /* Contact */
-    #contact {background:#f0fdf4; text-align:center; opacity:0; transform:translateY(30px); transition:1s;}
-    #contact.visible {opacity:1; transform:translateY(0);}
-    #contact a {color:#4CAF50; font-weight:500;}
-    
-    /* Footer */
-    footer {background:#333; color:#fff; text-align:center; padding:40px 20px;}
-    footer a {color:#FFD700;}
-    
-    /* Responsive */
-    @media(max-width:768px){
-      #about .about-content {flex-direction:column; text-align:center;}
-      #about img {margin:0 auto;}
-    }
+    nav{position:fixed;top:0;left:0;width:100%;background:rgba(255,255,255,0.95);border-bottom:1px solid #ddd;display:flex;justify-content:center;z-index:999;backdrop-filter:blur(5px);}
+    nav ul{display:flex;flex-wrap:wrap;}
+    nav li{margin:0 15px;}
+    nav a{display:block;padding:15px 0;font-weight:500;color:#333;}
+    nav a:hover{color:#4CAF50;}
+    header{background:url('https://images.unsplash.com/photo-1587194346982-f14b1ed1e1f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600') center/cover no-repeat fixed;height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;color:white;text-align:center;text-shadow:2px 2px 6px rgba(0,0,0,0.5);}
+    header h1{font-family:'Montserrat',sans-serif;font-size:3rem;margin-bottom:10px;}
+    header h2{font-size:1.5rem;margin-bottom:20px;font-weight:500;}
+    .btn{background:#FFD700;padding:12px 25px;border-radius:25px;color:#333;font-weight:500;margin:5px;transition:0.3s;}
+    .btn:hover{background:#FFC107;transform:scale(1.05);}
+    section{padding:80px 20px;}
+    section h2{text-align:center;font-family:'Montserrat',sans-serif;font-size:2rem;margin-bottom:40px;color:#4CAF50;}
+    .container{max-width:1000px;margin:0 auto;}
+    .about-content{display:flex;flex-wrap:wrap;align-items:center;gap:30px;}
+    .about-content img{flex:1 1 250px;max-width:250px;border-radius:10px;}
+    .about-content .text{flex:2 1 500px;}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+    .card{background:#fff;padding:20px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.1);transition:0.3s;}
+    .card:hover{transform:translateY(-5px) scale(1.03);box-shadow:0 4px 12px rgba(0,0,0,0.2);}
+    .card h3{margin-bottom:15px;color:#4CAF50;display:flex;align-items:center;gap:10px;}
+    footer{background:#333;color:#fff;text-align:center;padding:40px 20px;}
+    footer a{color:#FFD700;}
+    @media(max-width:768px){.about-content{flex-direction:column;text-align:center;}}
   </style>
 </head>
+
 <body>
 
-<!-- Navigation -->
 <nav>
   <ul>
     <li><a href="#about">Giới thiệu</a></li>
@@ -104,109 +52,55 @@
   </ul>
 </nav>
 
-<!-- Hero Banner -->
 <header>
   <h1><i class="fas fa-seedling"></i> LÊ THỊ DIỆU XUÂN</h1>
   <h2>Chuyên viên Trồng trọt & Bảo vệ thực vật</h2>
-  <div>
-    <a href="#contact" class="btn-contact">Liên hệ ngay</a>
-    <a href="CV_Lê_Thị_Diệu_Xuân.pdf" target="_blank" class="btn-cv"><i class="fas fa-file-download"></i> Tải CV</a>
-  </div>
+  <a href="#contact" class="btn">📩 Liên hệ ngay</a>
+  <a href="CV_Lê_Thị_Diệu_Xuân.pdf" class="btn" target="_blank">⬇️ Tải CV</a>
 </header>
 
-<!-- About Me -->
 <section id="about">
-  <h2><i class="fas fa-user"></i> Giới thiệu về tôi</h2>
+  <h2><i class="fas fa-user"></i> Giới thiệu</h2>
   <div class="container about-content">
-    <img src="https://via.placeholder.com/250x250.png?text=Ảnh+Chân+Dung" alt="Lê Thị Diệu Xuân">
+    <img src="https://via.placeholder.com/250" alt="Ảnh chân dung">
     <div class="text">
-      <p>Tôi là chuyên viên trong lĩnh vực trồng trọt và bảo vệ thực vật, hiện đang công tác tại Trung tâm Trồng trọt và Bảo vệ thực vật phía Nam. Tôi gắn bó với công tác giám sát, dự báo sâu bệnh hại trên cây trồng và chuyển giao các tiến bộ kỹ thuật đến nông dân.</p>
-      <p>Tôi hướng đến việc áp dụng các giải pháp khoa học phù hợp với thực tiễn sản xuất, góp phần nâng cao hiệu quả canh tác và xây dựng nền nông nghiệp an toàn, bền vững.</p>
+      <p>Tôi là chuyên viên trong lĩnh vực trồng trọt và bảo vệ thực vật, hiện đang công tác tại Trung tâm Trồng trọt và Bảo vệ thực vật phía Nam...</p>
     </div>
   </div>
 </section>
 
-<!-- Expertise -->
 <section id="expertise">
   <h2><i class="fas fa-lightbulb"></i> Lĩnh vực chuyên môn</h2>
   <div class="container grid">
     <div class="card"><h3><i class="fas fa-bug"></i> Giám sát & dự báo sâu bệnh</h3><p>Giám sát và dự báo sâu bệnh hại trên cây trồng.</p></div>
-    <div class="card"><h3><i class="fas fa-leaf"></i> Nhận diện sinh vật</h3><p>Nhận diện sâu hại, thiên địch, bệnh hại và cỏ dại.</p></div>
-    <div class="card"><h3><i class="fas fa-chalkboard-teacher"></i> Chuyển giao kỹ thuật</h3><p>Hỗ trợ nông dân áp dụng tiến bộ kỹ thuật.</p></div>
-    <div class="card"><h3><i class="fas fa-shield-alt"></i> Kiểm dịch thực vật</h3><p>Đánh giá nguy cơ sinh vật gây hại, bảo đảm an toàn sinh học.</p></div>
-    <div class="card"><h3><i class="fas fa-tree"></i> Bảo vệ sinh thái</h3><p>Bảo vệ thực vật theo hướng an toàn, sinh thái và bền vững.</p></div>
   </div>
 </section>
 
-<!-- Portfolio -->
 <section id="portfolio">
   <h2><i class="fas fa-project-diagram"></i> Dự án tiêu biểu</h2>
   <div class="container grid">
-    <div class="card">
-      <h3><i class="fas fa-seedling"></i> Ecological Engineering in Rice Production</h3>
-      <p>Triển khai các mô hình sinh thái trong sản xuất lúa, hướng dẫn nông dân áp dụng kỹ thuật bền vững.</p>
-    </div>
-    <div class="card">
-      <h3><i class="fas fa-apple-alt"></i> APPPC Training Workshop on Fruit Fly Management</h3>
-      <p>Đào tạo kỹ thuật quản lý ruồi đục quả cho cán bộ và nông dân.</p>
-    </div>
-    <div class="card">
-      <h3><i class="fas fa-leaf"></i> IPM & IPHM Training of the Trainers (TOT)</h3>
-      <p>Chương trình đào tạo giảng viên về quản lý dịch hại tổng hợp cho cây trồng.</p>
-    </div>
-    <div class="card">
-      <h3><i class="fas fa-tractor"></i> Dự án LEGATO</h3>
-      <p>Đánh giá rủi ro và cơ hội trong hệ thống lúa tưới tại châu Á, hỗ trợ nông dân tối ưu hóa sản xuất.</p>
-    </div>
+    <div class="card"><h3><i class="fas fa-seedling"></i> Ecological Engineering in Rice Production</h3><p>Triển khai mô hình sinh thái trong sản xuất lúa.</p></div>
   </div>
 </section>
 
-<!-- Experience -->
 <section id="experience">
-  <h2><i class="fas fa-briefcase"></i> Kinh nghiệm công tác</h2>
-  <div class="container timeline">
-    <div class="timeline-item">
-      <h3>Chuyên viên – Trung tâm Trồng trọt và Bảo vệ thực vật phía Nam (Đồng Tháp)</h3>
-      <p>Giám sát sản xuất cây trồng, dự báo sâu bệnh hại và hỗ trợ kỹ thuật tại địa phương.</p>
-    </div>
-    <div class="timeline-item">
-      <h3>Chuyên viên – Trung tâm Kiểm dịch thực vật sau nhập khẩu II (TP. Hồ Chí Minh)</h3>
-      <p>Phân tích nguy cơ dịch hại, hỗ trợ mở cửa thị trường nông sản, giám định sinh vật gây hại.</p>
-    </div>
+  <h2><i class="fas fa-briefcase"></i> Kinh nghiệm</h2>
+  <div class="container">
+    <div class="card"><h3>Chuyên viên – Trung tâm Trồng trọt & Bảo vệ thực vật phía Nam (Đồng Tháp)</h3></div>
   </div>
 </section>
 
-<!-- Contact -->
 <section id="contact">
   <h2><i class="fas fa-envelope"></i> Liên hệ</h2>
   <div class="container">
-    <p>Trung tâm Trồng trọt và Bảo vệ thực vật phía Nam</p>
-    <p>Ấp Mới, xã Long Định, tỉnh Đồng Tháp</p>
-    <p>📧 <a href="mailto:dieuxuanlesrppc@gmail.com">dieuxuanlesrppc@gmail.com</a></p>
+    <p>📧 dieuxuanlesrppc@gmail.com</p>
     <p>📞 0907 525 758</p>
-    <p style="margin-top:20px;"><em>“Khoa học chỉ thực sự có ý nghĩa khi gắn liền với thực tiễn sản xuất và mang lại lợi ích thiết thực cho người nông dân.”</em></p>
   </div>
 </section>
 
-<!-- Footer -->
 <footer>
-  <p>© 2025 Lê Thị Diệu Xuân | Designed with ❤️ | <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
+  <p>© 2025 Lê Thị Diệu Xuân | Website cá nhân</p>
 </footer>
-
-<script>
-  // Scroll animation
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('visible');
-      }
-    });
-  }, {threshold:0.2});
-  
-  document.querySelectorAll('.about-content, .card, .timeline, #contact').forEach(el => {
-    observer.observe(el);
-  });
-</script>
 
 </body>
 </html>
